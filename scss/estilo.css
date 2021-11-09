@@ -93,7 +93,7 @@
             animation-name: aparecer;
     -webkit-animation-iteration-count: infinite;
             animation-iteration-count: infinite;
-    text-shadow: 0 0 60px 0 0 60px #f1d72b;
+    text-shadow: 0 0 60px #f1d72b;
     -ms-grid-row: 3;
     -ms-grid-column: 2;
     grid-area: titulo;

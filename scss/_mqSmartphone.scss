@@ -62,7 +62,7 @@
         animation-duration: 2s;
         animation-name: aparecer;
         animation-iteration-count: infinite;
-        text-shadow: 0 0 60px $sombrac;
+        text-shadow: $sombrac;
         grid-area: titulo;
     }
     
