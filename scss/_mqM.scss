@@ -1,0 +1,566 @@
+@media #{$tablets} {
+    
+    body{
+        background-color: $colorBgm;
+        background-image: $colorBgGm;
+        padding: auto;
+        margin: 10px;
+        }
+        
+    
+    h1{
+        color: $colorh1m;
+        font-family: 'Grechen Fuemen', cursive;
+        font-size: 60px;
+        text-align: center;
+        padding: 10px;
+    }
+    
+    h2{
+        color: $colorh1m;
+        text-align: center;
+        text-decoration: underline;
+        margin: 15px;
+    }
+    
+    /* HEADER */
+    header {
+        display: grid;
+        flex-direction: column;
+        align-items: center;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: "nav nav nav" ". logo ."" . titulo .";
+        img {
+            width: 90%;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            grid-area: logo;
+            border-radius: 10px;
+            width: 550px;
+        }
+    }
+
+    .contenedor {
+        img {
+            width: 600px;
+            margin: auto;
+            display: flex;
+            position: relative;
+            top: 20px;
+            left: 5px;
+            flex-direction: column;
+            grid-area: logo;
+            border-radius: 10px;
+        }
+    }
+
+    .aparecer {
+        justify-content: center;
+        position: relative;
+        top: 25px;
+        margin-bottom: 50px;
+        font-size: 45px;
+        animation-duration: 2s;
+        animation-name: aparecer;
+        animation-iteration-count: infinite;
+        text-shadow: $sombram;
+        grid-area: titulo;
+    }
+
+    @keyframes aparecer {
+        0% {opacity: 0;}
+        25% {opacity: 0.25;}
+        50% {opacity: 0.5;}
+        75% {opacity: 0.75;}
+        100% {opacity: 1;}
+    }
+
+    /*MENU*/
+    nav {
+        position: fixed;
+        z-index: 10;
+        left: 0;
+        right: 0;
+        top: 0;
+        font-family: 'Montserrat', sans-serif;
+        padding: 0 5%;
+        height: 100px;
+        background-color: #d7e1ec;
+        grid-area: nav;
+        border: 3px double $bordem;
+        .logo {
+            position: relative;
+            text-align: center;
+            font-size: 22px;
+            font-weight: bolder;
+            color: $navLogom;
+            text-decoration: underline;
+        }
+        .links {
+            float: right;
+            padding: 0;
+            margin: 0;
+            width: 60%;
+            height: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            li {
+                list-style: none;
+            }
+            a {
+                display: block;
+                padding: 10px;
+                position: relative;
+                bottom: 20px;
+                right: 180px;
+                text-align: center;
+                font-size: 15px;
+                font-weight: bold;
+                color: $bordem;
+                text-decoration: underline;
+                width: auto;
+                height: 100%;
+                align-items: center;
+            }
+        }
+        .icon-burger {
+            display: none;
+            position: absolute;
+            right: 5%;
+            top: 50%;
+            transform: translateY(-50%);
+            .line {
+                width: 30px;
+                height: 5px;
+                background-color: $colorBgm;
+                margin: 5px;
+                border-radius: 3px;
+                transition: all .3s ease-in-out;
+            }
+        }
+    }
+
+    #nav-toggle {
+        position: absolute;
+        top: -100px;
+    }
+
+    .imagenHeader {
+        height: 50px;
+        width: 50px;
+        padding: 5px;
+    }
+    
+    /*SECCIONES*/
+    /*SECCION NUESTROS DISFRACES*/
+    .nuestrosDisfraces{
+        background-color: $colorBgm;
+        background-image: $colorBgGm;
+        padding: auto;
+        margin: 20px;
+    }
+
+    .headerNuestros{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .info__imagenes {
+        display: flex;
+        margin: auto;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        text-align: center;
+        width: 90%;
+        height: auto;
+        border: 4px double $bordem;
+        border-radius: 10px;
+        padding: 50px;
+        img {
+            border: 2px double $bordem;
+            border-radius: 10px;
+            opacity: .8;
+            padding: 20px;
+            margin: 20px;
+            width: 200px;
+            height: 200px;
+            &:hover {
+                border: 2px solid $bordem;
+                opacity: 1;
+            }
+        }
+    }
+
+    .zoom {
+        &:hover {
+            transform: scale(1.2);
+        }
+        transition: transform .6s;
+    }
+
+    /*SECCION NOSOTROS*/
+    .nosotros{
+        background-color: $colorBgm;
+        background-image: $colorBgGm;
+        padding: auto;
+        margin: 20px;
+    }
+    
+    .headerNosotros {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h1 {
+            color: $colorp;
+            font-weight: bolder;
+        }
+    }
+
+    .row {
+        .col-12 {
+            p {
+                color:$colorp;
+            }
+        }
+    }
+
+    .carousel {
+        display: flex;
+        margin: auto;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        text-align: center;
+        width: 350px;
+        height: auto;
+        border: 4px double $bordem;
+        border-radius: 10px;
+        padding: 20px;
+        img {
+            border: 2px double $bordem;
+            border-radius: 10px;
+            opacity: .8;
+        }
+    }
+    
+    /*SECCION CLIENTES*/
+    .clientes{
+        background-color: $colorBgm;
+        background-image: $colorBgGm;
+        padding: auto;
+        margin: 20px;
+    }
+
+    .headerClientes{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /*SECCION PREGUNTAS FRECUENTES*/
+    .preguntas{
+        background-color: $colorBgm;
+        background-image: $colorBgGm;
+        padding: auto;
+        margin: 20px;
+    }
+
+    .headerPreguntas{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .h2Preguntas{
+        color: $h2Preguntasm;
+        font-weight: normal;
+        font-size: 40px;
+    }
+
+    .h3Preguntas{
+        color: $h3Preguntasm;
+        text-align: center;
+        margin: 30px;
+    }
+
+    .main{
+        margin: 10px;
+        border: 4px double $bordem;
+        border-radius: 10px;
+    }
+
+    .main__info{
+        position: relative;
+        top: 10px;
+        text-align: center;
+        color: $infom;
+        font-size: 25px;
+        padding: auto;
+        margin: 20px;    
+    }
+
+    /*SECCION CONTACTANOS*/
+    .contactanos{
+        background-color: $colorBgm;
+        background-image: $colorBgGm;
+        color: $colorp;
+        text-align: center;
+        width: 95%;
+        font-size: 35px;
+        padding: auto;
+        margin: 20px;
+    }
+
+    .headerContactanos{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footerCont{
+        margin: 45px;
+        width: 90%;
+        left: 10px;
+        height: 350px;
+        gap: 15px;
+        border: 1px solid $bordem;
+        border-radius: 5px;
+        display: grid;
+        grid-template-columns: repeat(1fr 1fr);
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+        "texto texto"
+        "mapa datos";
+    }
+
+    .footerCont__texto{
+        grid-area: texto;
+        padding: 10px;
+        margin: 5px;
+        position: relative;
+        bottom: 10px;
+    }
+
+    .footerCont__mapa{
+        grid-area: mapa;
+        display: flex;
+        position: relative;
+        bottom: 50px;
+    }
+
+    .footerCont__datos{
+        grid-area: datos;
+        display: flex;
+        position: relative;
+        font-size: 25px;
+        color: $colorh2m;
+    }
+
+    .formulario{
+        margin: 30px;
+        padding: 10px;
+        position: relative;
+        top: 10px;
+        color: $colorp;
+    }
+
+    legend{
+        color:  $colorp;
+        font-size: 35px;
+    }
+
+    .fieldset{
+        padding: 15px;
+        border: 4px double $bordem;
+        border-radius: 10px;
+    }
+
+    .flex{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-around;
+            width: 95%;
+            margin: 20px;
+    }
+
+    .imagenes__flex img{
+        width: 200px;
+        height: 200px;
+        margin: 15px;
+        border: 5px double $bordem;
+        border-radius: 10px;
+    }
+
+    .info{
+        position: relative;
+        top: 10px;
+        text-align: center;
+        color: $colorp;
+        font-size: 20px;
+        padding: auto;
+        margin: 20px;    
+    }
+
+    /*LISTAS*/
+    .nosDestacamos{
+        color:$colorh1m;
+        text-decoration: underline;
+        font-size: 35px;
+        font-style: italic;
+        display: flex;
+        justify-content: start;
+        padding: 10px;
+        
+    }
+
+    .requisitosNecesarios {
+        color: $colorh1m;
+        text-decoration: underline;
+        font-size: 35px;
+        font-style: italic;
+        display: flex;
+        justify-content: start;
+        padding: 10px;
+    }
+
+    span{
+        color:$colorh1m;
+        font-size: 25px;
+        font-weight: bolder;
+        text-decoration: underline;
+    }
+
+    .olLista{
+        color: $colorOl;
+        list-style-type: square;
+        position: relative;
+        left: 30px;
+        font-size: 25px;
+        padding: 20px;
+    }
+    
+    .teEstamosEsperando{
+        color:$colorh1m;
+        text-align: center; 
+        font-size: 35px;
+        font-family: 'EB Garamond', serif;
+        margin: 20px;
+    }
+
+    /*IMAGENES*/
+    .imagenes {
+        display: flex;
+        margin: auto;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        text-align: center;
+        width: 90%;
+        height: auto;
+        border: 4px double $bordeFooterm;
+        border-radius: 10px;
+        padding: 50px;
+        img {
+            border: 2px double $bordeFooterm;
+            border-radius: 10px;
+            opacity: .8;
+            padding: 20px;
+            margin: 20px;
+            width: 200px;
+            height: 200px;
+            &:hover {
+                border: 2px solid $bordeFooterm;
+                opacity: 1;
+            }
+        }
+    }
+
+    .zoom {
+        &:hover {
+            transform: scale(1.3);
+        }
+        transition: transform .6s;
+    }
+
+    /*BOTON*/
+    .button {
+        display: flex;
+        justify-content: center;
+        padding: 5px;
+        button {
+            text-align: center;
+            background-color: $botonBgm;
+            color: $colorh1m;
+            display: flex;
+            opacity: .5;
+            border-radius: 30px;
+            padding: 5px;
+            font-size: 10px;
+            &:hover {
+                color: $botonm;
+                background-color: $botonBgm;
+                text-align: center;
+                opacity: 1;
+                border: 1px solid $botonm;
+                transform: scale(1,1.2);
+                transition: .6s;
+            }
+            a {
+                &:hover {
+                    background-color: $botonBgm;
+                    color: $colorh1m;
+                    border-radius: 30px;
+                }
+            }
+        }
+    }
+    
+    /*FOOTER*/
+    footer{
+        opacity: .7;
+        padding: 15px;
+        width: 90%;
+        color: $colorp;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        font-size: 25px;
+        font-weight: bolder;
+    }
+    
+    .footer__didiseñadoPor{
+        display: flex;
+        position: relative;
+        left: 15px;
+        top: 10px;
+    }
+
+    .footer__redes {
+        width: 60px;
+        display: flex;
+        img {
+            display: flex;
+            position: relative;
+            margin: 10px;
+            border-radius: 25px;
+            bottom: 10px;
+            right: 65px;
+            width: 50px;
+            opacity: .7;
+            &:hover {
+                transform: scale( 2, 2);
+                transition: 1s;
+                padding: 5px;
+                opacity: 1;
+                border-radius: 25px;
+            }
+        }
+    }
+}
