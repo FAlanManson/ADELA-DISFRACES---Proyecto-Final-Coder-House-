@@ -1,13 +1,15 @@
-@media #{$smartphone}{
+@media #{$smartphone} {
+
     body{
-        background-color: $colorBgc ;
-        background-image: $colorBgGc;
+        background-color: $bg;
+        background-image: $bgG;
         padding: auto;
-        margin: 20px
+        margin: 20px;
+        padding: 20px;
     }
 
     h1{
-        color: $colorh1c;
+        color: $colorh1;
         font-family: 'Grechen Fuemen', cursive;
         font-size: 40px;
         text-align: center;
@@ -15,54 +17,47 @@
     }
     
     h2{
-        color: $colorh2c;
+        color: $colorh2;
         text-align: center;
         text-decoration: underline;
-        margin: 15px;
     }
     
     /* HEADER */
-    
     header{
         display: grid;
         flex-direction: column;
         align-items: center;
-        display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr;
         grid-template-areas: "nav nav nav" ". logo ."" . titulo .";
         img{
             max-width: 100%;
             margin: auto;
-            display: flex;
-            flex-direction: column;
             grid-area: logo;
             border-radius: 10px;
         }
     }
 
-    .contenedor img {
+    .contenedor {
+        img {
         max-width: 350px;
         margin: auto;
-        display: flex;
-        flex-direction: column;
         grid-area: logo;
         position: relative;
-        top: 15px;
+        top: 25px;
         border-radius: 10px;
+        }
     }
 
     .aparecer{ 
-        display: flex;
-        justify-content: center;
+        font-size: 35px;
         position: relative;
         top: 25px;
         margin-bottom: 50px;
-        font-size: 35px;
         animation-duration: 2s;
         animation-name: aparecer;
         animation-iteration-count: infinite;
-        text-shadow: $sombrac;
+        text-shadow: $sombra;
         grid-area: titulo;
     }
     
@@ -84,17 +79,16 @@
         font-family: 'Montserrat', sans-serif;
         padding: 0 5%;
         height: 90px;
-        background-color: #647dee;
+        background-color: $bg;
         grid-area: nav;
-        border: 2px double $colorh2c;
+        border: 3px double $borde;
         .logo {
             font-size: 15px;
-            color: $colorh2c;
+            color: $navLogo;
             text-decoration: underline;
-            text-decoration-color: $navLogoc;
-            font-weight: bold;
+            font-weight: bolder;
             position: relative;
-            top: 5px;
+            top: 10px;
             text-align: center;
         }
         .links {
@@ -104,6 +98,7 @@
             display: flex;
             justify-content: space-around;
             align-items: center;
+            text-decoration: underline;
             li {
                 list-style: none;
             }
@@ -115,11 +110,8 @@
                 text-align: center;
                 font-size: 9px;
                 font-weight: bold;
-                color: $colorh1c;
+                color: $colorh1;
                 text-decoration: underline;
-                width: auto;
-                height: 100%;
-                align-items: center;
             }
         }
         &:checked {
@@ -150,8 +142,8 @@
     /*SECCIONES*/
     /*SECCION NUESTROS DISFRACES*/
     .nuestrosDisfraces{
-        background-color: $colorBgc;
-        background-image: $colorBgGc;
+        background-color: $colorBgg;
+        background-image: $colorBgGg;
         padding: auto;
         margin: 20px;
     }
@@ -172,11 +164,11 @@
         text-align: center;
         width: 90%;
         height: auto;
-        border: 4px double $colorh2c;
+        border: 4px double $borde;
         border-radius: 10px;
         padding: 50px;
         img {
-            border: 2px double $colorh2c;
+            border: 2px double $borde;
             border-radius: 10px;
             opacity: .8;
             padding: 20px;
@@ -184,7 +176,7 @@
             width: 180px;
             height: 180px;
             &:hover {
-                border: 2px solid $colorh2c;
+                border: 2px solid $borde;
                 opacity: 1;
             }
         }
@@ -199,8 +191,8 @@
         
     /*SECCION NOSOTROS*/
     .nosotros{
-        background-color: $colorBgc;
-        background-image: $colorBgGc;
+        background-color: $bg;
+        background-image: $bgG;
         padding: auto;
         margin: 20px;
     }
@@ -210,7 +202,7 @@
         flex-direction: column;
         align-items: center;
         h1 {
-            color: $colorh1c;
+            color: $colorh1;
             font-family: 'Grechen Fuemen', cursive;
             font-size: 50px;
             text-align: center;
@@ -221,7 +213,7 @@
     .row {
         .col-12 {
             p {
-                color: $colorh1c;
+                color: #ffffff;
                 font-size: 20px;
             }
         }
@@ -234,13 +226,12 @@
         flex-wrap: wrap;
         justify-content: space-around;
         text-align: center;
-        width: 350px;
-        height: auto;
-        border: 4px double #f3e691;
+        border: 4px double $borde;
         border-radius: 10px;
+        height: auto;
         padding: 20px;
         img {
-            border: 2px double #f3e691;
+            border: 2px double $borde;
             border-radius: 10px;
             opacity: .8;
         }
@@ -248,8 +239,8 @@
     
     /*SECCION CLIENTES*/
     .clientes{
-        background-color: $colorBgc;
-        background-image: $colorBgGc;
+        background-color: $colorBgg;
+        background-image: $colorBgGg;
         padding: auto;
         margin: 20px;
     }
@@ -267,8 +258,8 @@
 
     /*SECCION PREGUNTAS FRECUENTES*/
     .preguntas{
-        background-color: $colorBgc;
-        background-image: $colorBgGc;
+        background-color: $colorBgg;
+        background-image: $colorBgGg;
         padding: auto;
         margin: 20px;
     }
@@ -280,43 +271,57 @@
     }
 
     .h2Preguntas{
-        color: $h2Preguntasc;
+        color: $h2Preguntas;
         font-weight: normal;
     }
 
     .h3Preguntas{
-        color: $h3Preguntasc;
+        color: $h3Preguntas;
         text-align: center;
         margin: 30px;
     }
 
     .main{
         margin: 10px;
-        border: 4px double $colorh2c;
+        border: 4px double $borde;
         border-radius: 10px;
     }
 
     .main__info{
-        position: relative;
-        top: 10px;
         text-align: center;
-        color: rgb(255, 255, 255);
-        font-size: 25px;
+        color: $info;
+        font-size: 20px;
         padding: auto;
         margin: 20px;    
     }
 
     /*SECCION CONTACTANOS*/
     .contactanos{
-        background-color: $colorBgc;
-        background-image: $colorBgGc;
-        color: $colorh2c;
+        background-color: $colorBgg;
+        background-image: $colorBgGg;
         text-align: center;
-        width: 90%;
-        color: $titulosc;
         font-size: 20px;
         padding: auto;
         margin: 20px;
+    }
+
+    .formulario{
+        margin: 30px;
+        padding: 10px;
+        position: relative;
+        top: 10px;
+        color: $colorh1;
+    }
+
+    .fieldset{
+        padding: 15px;
+        border: 4px double $borde;
+        border-radius: 10px;
+    }
+
+    legend{
+        color:  $colorh2;
+        font-size: 25px;
     }
 
     .headerContactanos{
@@ -326,14 +331,14 @@
     }
 
     .footerCont{
-        margin: 45px;
-        width: 95%;
+        margin: 12px;
         height: 400px;
         text-align: center;
         position: relative;
-        right: 35px;
+        left: 5px;
+        text-align: center;
         gap: 15px;
-        border: 1px solid $colorh2c;
+        border: 1px solid lightgray;
         border-radius: 5px;
         display: grid;
         grid-template-columns: repeat(1fr 1fr);
@@ -342,7 +347,7 @@
         "texto texto"
         "mapa datos";
     }
-
+    
     .footerCont__texto{
         grid-area: texto;
         padding: 10px;
@@ -356,6 +361,8 @@
         display: flex;
         position: relative;
         bottom: 30px;
+        width: 150px ;
+        height: 150px ;
     }
 
     .footerCont__datos{
@@ -363,26 +370,7 @@
         display: flex;
         position: relative;
         font-size: 15px;
-        color: $colorh2c;
-    }
-
-    .formulario{
-        margin: 30px;
-        padding: 10px;
-        position: relative;
-        top: 10px;
-        color: $colorh2c;
-    }
-
-    legend{
-        color:  $colorh2c;
-        font-size: 25px;
-    }
-
-    .fieldset{
-        padding: 15px;
-        border: 4px double $colorh2c;
-        border-radius: 10px;
+        color: $colorh1;
     }
 
     .flex{
@@ -390,7 +378,6 @@
             flex-direction: row;
             flex-wrap: nowrap;
             justify-content: space-around;
-            width: 90%;
             margin: 20px;
     }
 
@@ -398,13 +385,11 @@
         width: 350px;
         height: 350px;
         margin: 15px;
-        border: 5px double $colorh2c;
+        border: 5px double $borde;
         border-radius: 10px;
     }
 
     .info{
-        position: relative;
-        top: 10px;
         text-align: center;
         color: rgb(255, 255, 255);
         font-size: 25px;
@@ -412,46 +397,43 @@
         margin: 20px;    
     }
 
-
         /*LISTAS*/
     .nosDestacamos{
-        color: $colorh1c;
+        color:$colorp;
         text-decoration: underline;
         font-size: 30px;
         font-style: italic;
         display: flex;
         justify-content: start;
-        padding: 10px;
+        padding: 5px;
     }
 
     .requisitosNecesarios {
-        color: $colorh1c;
+        color: $colorp;
         text-decoration: underline;
         font-size: 30px;
         font-style: italic;
         display: flex;
         justify-content: start;
-        padding: 10px;
+        padding: 5px;
     }
 
     span{
-        color:$colorh1c ;
-        font-size: 22px;
+        color:$colorp;
+        font-size: 18px;
         font-weight: bolder;
         text-decoration: underline;
     }
 
     .olLista{
-        color: white;
+        color: $colorh1;
         list-style-type: square;
-        position: relative;
-        left: 30px;
-        font-size: 22px;
+        font-size: 15px;
         padding: 20px;
     }
     
     .teEstamosEsperando{
-        color:$colorh1c;
+        color:$colorh1;
         text-align: center; 
         font-size: 25px;
         font-family: 'EB Garamond', serif;
@@ -465,22 +447,21 @@
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-around;
-        text-align: center;
         width: 90%;
         height: auto;
-        border: 4px double $colorh2c;
+        border: 4px double $borde;
         border-radius: 10px;
         padding: 50px;
         img {
-            border: 2px double $colorh2c;
+            border: 2px double $borde;
             border-radius: 10px;
             opacity: .8;
             padding: 20px;
             margin: 20px;
-            width: 280px;
-            height: 280px;
+            width: 200px;
+            height: 200px;
             &:hover {
-                border: 2px solid $colorh2c;
+                border: 2px solid $borde;
                 opacity: 1;
             }
         }
@@ -501,25 +482,25 @@
         button {
             text-align: center;
             background-color: lightgray;
-            color: $colorh2c;
+            color: $colorh1;
             display: flex;
             opacity: .5;
             border-radius: 30px;
             padding: 5px;
             font-size: 10px;
             &:hover {
-                color: $botonc;
-                background-color: $botonBgc;
+                color: $boton;
+                background-color: $botonBgg;
                 text-align: center;
                 opacity: 1;
-                border: 1px solid $botonc;
+                border: 1px solid $boton;
                 transform: scale(1,1.2);
                 transition: .6s;
             }
             a {
                 &:hover {
-                    background-color: $botonBgc;
-                    color: $botonc;
+                    background-color: $botonBgg;
+                    color: $boton;
                     border-radius: 30px;
                 }
             }
@@ -530,15 +511,13 @@
     footer{
         opacity: .7;
         padding: 15px;
-        width: 90%;
-        color: #f3e691;
+        color: $colorh1;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         font-size: 20px;
     }
 
-    
     .footer__didiseñadoPor{
         display: flex;
         position: relative;
@@ -547,9 +526,9 @@
     }
 
     .footer__redes {
-        color: #f3e691;
         width: 30px;
         display: flex;
+        padding: 10px;
         img {
             display: flex;
             position: relative;
@@ -557,7 +536,7 @@
             border-radius: 25px;
             bottom: 10px;
             right: 15px;
-            width: 35px;
+            width: 40px;
             opacity: .7;
             &:hover {
                 transform: scale( 2, 2);

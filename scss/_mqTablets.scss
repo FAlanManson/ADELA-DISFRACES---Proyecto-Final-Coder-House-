@@ -1,15 +1,15 @@
 @media #{$tablets} {
     
     body{
-        background-color: $colorBgm;
-        background-image: $colorBgGm;
+        background-color: $bg;
+        background-image: $bgG;
         padding: auto;
-        margin: 10px;
+        margin: 3rem;
+        padding: 20px;
         }
-        
     
     h1{
-        color: $colorh1m;
+        color: $colorh1;
         font-family: 'Grechen Fuemen', cursive;
         font-size: 60px;
         text-align: center;
@@ -17,10 +17,9 @@
     }
     
     h2{
-        color: $colorh1m;
+        color: $colorh2;
         text-align: center;
         text-decoration: underline;
-        margin: 15px;
     }
     
     /* HEADER */
@@ -32,13 +31,10 @@
         grid-template-rows: 1fr 1fr;
         grid-template-areas: "nav nav nav" ". logo ."" . titulo .";
         img {
-            width: 90%;
+            width: 100%;
             margin: auto;
-            display: flex;
-            flex-direction: column;
             grid-area: logo;
             border-radius: 10px;
-            width: 550px;
         }
     }
 
@@ -46,26 +42,22 @@
         img {
             width: 600px;
             margin: auto;
-            display: flex;
+            grid-area: logo;
             position: relative;
             top: 20px;
-            left: 5px;
-            flex-direction: column;
-            grid-area: logo;
             border-radius: 10px;
         }
     }
 
     .aparecer {
-        justify-content: center;
+        font-size: 45px;
         position: relative;
         top: 25px;
         margin-bottom: 50px;
-        font-size: 45px;
         animation-duration: 2s;
         animation-name: aparecer;
         animation-iteration-count: infinite;
-        text-shadow: $sombram;
+        text-shadow: $sombra;
         grid-area: titulo;
     }
 
@@ -87,26 +79,26 @@
         font-family: 'Montserrat', sans-serif;
         padding: 0 5%;
         height: 100px;
-        background-color: #d7e1ec;
+        background-color: $bg;
         grid-area: nav;
-        border: 3px double $bordem;
+        border: 3px double $borde;
         .logo {
-            position: relative;
-            text-align: center;
-            font-size: 22px;
-            font-weight: bolder;
-            color: $navLogom;
+            font-size: 20px;
+            color: $navLogo;
             text-decoration: underline;
+            font-weight: bolder;
+            position: relative;
+            top: 10px;
+            text-align: center;
         }
         .links {
-            float: right;
             padding: 0;
             margin: 0;
-            width: 60%;
             height: 100%;
             display: flex;
             justify-content: space-around;
             align-items: center;
+            text-decoration: underline;
             li {
                 list-style: none;
             }
@@ -114,16 +106,12 @@
                 display: block;
                 padding: 10px;
                 position: relative;
-                bottom: 20px;
-                right: 180px;
+                bottom: 10px;
                 text-align: center;
-                font-size: 15px;
+                font-size: 14px;
                 font-weight: bold;
-                color: $bordem;
+                color: $colorh1;
                 text-decoration: underline;
-                width: auto;
-                height: 100%;
-                align-items: center;
             }
         }
         .icon-burger {
@@ -135,7 +123,7 @@
             .line {
                 width: 30px;
                 height: 5px;
-                background-color: $colorBgm;
+                background-color: #fff;
                 margin: 5px;
                 border-radius: 3px;
                 transition: all .3s ease-in-out;
@@ -148,19 +136,13 @@
         top: -100px;
     }
 
-    .imagenHeader {
-        height: 50px;
-        width: 50px;
-        padding: 5px;
-    }
-    
     /*SECCIONES*/
     /*SECCION NUESTROS DISFRACES*/
     .nuestrosDisfraces{
-        background-color: $colorBgm;
-        background-image: $colorBgGm;
+        background-color: $colorBgg;
+        background-image: $colorBgGg;
         padding: auto;
-        margin: 20px;
+        margin: 3rem;
     }
 
     .headerNuestros{
@@ -178,11 +160,11 @@
         text-align: center;
         width: 90%;
         height: auto;
-        border: 4px double $bordem;
+        border: 4px double $borde;
         border-radius: 10px;
         padding: 50px;
         img {
-            border: 2px double $bordem;
+            border: 2px double $borde;
             border-radius: 10px;
             opacity: .8;
             padding: 20px;
@@ -190,7 +172,7 @@
             width: 200px;
             height: 200px;
             &:hover {
-                border: 2px solid $bordem;
+                border: 2px solid $borde;
                 opacity: 1;
             }
         }
@@ -205,8 +187,8 @@
 
     /*SECCION NOSOTROS*/
     .nosotros{
-        background-color: $colorBgm;
-        background-image: $colorBgGm;
+        background-color: $bg;
+        background-image: $bgG;
         padding: auto;
         margin: 20px;
     }
@@ -216,7 +198,10 @@
         flex-direction: column;
         align-items: center;
         h1 {
-            color: $colorp;
+            color: $colorh1;
+            font-family: 'Grechen Fuemen', cursive;
+            font-size: 50px;
+            text-align: center;
             font-weight: bolder;
         }
     }
@@ -224,7 +209,8 @@
     .row {
         .col-12 {
             p {
-                color:$colorp;
+                color: #ffffff;
+                font-size: 25px;
             }
         }
     }
@@ -236,13 +222,13 @@
         flex-wrap: wrap;
         justify-content: space-around;
         text-align: center;
+        border: 4px double $borde;
+        border-radius: 10px;
         width: 350px;
         height: auto;
-        border: 4px double $bordem;
-        border-radius: 10px;
         padding: 20px;
         img {
-            border: 2px double $bordem;
+            border: 2px double $borde;
             border-radius: 10px;
             opacity: .8;
         }
@@ -250,10 +236,10 @@
     
     /*SECCION CLIENTES*/
     .clientes{
-        background-color: $colorBgm;
-        background-image: $colorBgGm;
+        background-color: $colorBgg;
+        background-image: $colorBgGg;
         padding: auto;
-        margin: 20px;
+        margin: 3rem;
     }
 
     .headerClientes{
@@ -264,10 +250,10 @@
 
     /*SECCION PREGUNTAS FRECUENTES*/
     .preguntas{
-        background-color: $colorBgm;
-        background-image: $colorBgGm;
+        background-color: $colorBgg;
+        background-image: $colorBgGg;
         padding: auto;
-        margin: 20px;
+        margin: 3rem;
     }
 
     .headerPreguntas{
@@ -277,28 +263,26 @@
     }
 
     .h2Preguntas{
-        color: $h2Preguntasm;
+        color: $h2Preguntas;
         font-weight: normal;
         font-size: 40px;
     }
 
     .h3Preguntas{
-        color: $h3Preguntasm;
+        color: $h3Preguntas;
         text-align: center;
         margin: 30px;
     }
 
     .main{
         margin: 10px;
-        border: 4px double $bordem;
+        border: 4px double $borde;
         border-radius: 10px;
     }
 
     .main__info{
-        position: relative;
-        top: 10px;
         text-align: center;
-        color: $infom;
+        color: $info;
         font-size: 25px;
         padding: auto;
         margin: 20px;    
@@ -306,14 +290,32 @@
 
     /*SECCION CONTACTANOS*/
     .contactanos{
-        background-color: $colorBgm;
-        background-image: $colorBgGm;
-        color: $colorp;
+        background-color: $colorBgg;
+        background-image: $colorBgGg;
         text-align: center;
         width: 95%;
         font-size: 35px;
         padding: auto;
         margin: 20px;
+    }
+    
+    .formulario{
+        margin: 30px;
+        padding: 10px;
+        position: relative;
+        top: 10px;
+        color: $colorh1;
+    }
+    
+    .fieldset{
+        padding: 15px;
+        border: 4px double $borde;
+        border-radius: 10px;
+    }
+
+    legend{
+        color:  $colorh2;
+        font-size: 35px;
     }
 
     .headerContactanos{
@@ -321,14 +323,14 @@
         flex-direction: column;
         align-items: center;
     }
-
+    
     .footerCont{
         margin: 45px;
-        width: 90%;
-        left: 10px;
+        max-width: 90%;
         height: 350px;
-        gap: 15px;
-        border: 1px solid $bordem;
+        text-align: center;
+        gap: 25px;
+        border: 1px solid lightgray;
         border-radius: 5px;
         display: grid;
         grid-template-columns: repeat(1fr 1fr);
@@ -337,7 +339,7 @@
         "texto texto"
         "mapa datos";
     }
-
+    
     .footerCont__texto{
         grid-area: texto;
         padding: 10px;
@@ -351,6 +353,8 @@
         display: flex;
         position: relative;
         bottom: 50px;
+        width: 220px ;
+        height: 220px ;
     }
 
     .footerCont__datos{
@@ -358,26 +362,7 @@
         display: flex;
         position: relative;
         font-size: 25px;
-        color: $colorh2m;
-    }
-
-    .formulario{
-        margin: 30px;
-        padding: 10px;
-        position: relative;
-        top: 10px;
-        color: $colorp;
-    }
-
-    legend{
-        color:  $colorp;
-        font-size: 35px;
-    }
-
-    .fieldset{
-        padding: 15px;
-        border: 4px double $bordem;
-        border-radius: 10px;
+        color: $colorh1;
     }
 
     .flex{
@@ -393,15 +378,13 @@
         width: 200px;
         height: 200px;
         margin: 15px;
-        border: 5px double $bordem;
+        border: 5px double $borde;
         border-radius: 10px;
     }
 
     .info{
-        position: relative;
-        top: 10px;
         text-align: center;
-        color: $colorp;
+        color: rgb(255, 255, 255);
         font-size: 20px;
         padding: auto;
         margin: 20px;    
@@ -409,46 +392,43 @@
 
     /*LISTAS*/
     .nosDestacamos{
-        color:$colorh1m;
+        color:$colorp;
         text-decoration: underline;
-        font-size: 35px;
+        font-size: 30px;
         font-style: italic;
         display: flex;
         justify-content: start;
-        padding: 10px;
-        
+        padding: 5px;
     }
 
     .requisitosNecesarios {
-        color: $colorh1m;
+        color: $colorp;
         text-decoration: underline;
         font-size: 35px;
         font-style: italic;
         display: flex;
         justify-content: start;
-        padding: 10px;
+        padding: 5px;
     }
 
     span{
-        color:$colorh1m;
+        color:$colorp;
         font-size: 25px;
         font-weight: bolder;
         text-decoration: underline;
     }
 
     .olLista{
-        color: $colorOl;
+        color: $colorh1;
         list-style-type: square;
-        position: relative;
-        left: 30px;
-        font-size: 25px;
+        font-size: 20px;
         padding: 20px;
     }
     
     .teEstamosEsperando{
-        color:$colorh1m;
+        color:$colorh1;
         text-align: center; 
-        font-size: 35px;
+        font-size: 30px;
         font-family: 'EB Garamond', serif;
         margin: 20px;
     }
@@ -460,14 +440,13 @@
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-around;
-        text-align: center;
         width: 90%;
         height: auto;
-        border: 4px double $bordeFooterm;
+        border: 4px double $borde;
         border-radius: 10px;
         padding: 50px;
         img {
-            border: 2px double $bordeFooterm;
+            border: 2px double $borde;
             border-radius: 10px;
             opacity: .8;
             padding: 20px;
@@ -475,7 +454,7 @@
             width: 200px;
             height: 200px;
             &:hover {
-                border: 2px solid $bordeFooterm;
+                border: 2px solid $borde;
                 opacity: 1;
             }
         }
@@ -495,26 +474,26 @@
         padding: 5px;
         button {
             text-align: center;
-            background-color: $botonBgm;
-            color: $colorh1m;
+            background-color: lightgray;
+            color: $colorh1;
             display: flex;
             opacity: .5;
             border-radius: 30px;
             padding: 5px;
             font-size: 10px;
             &:hover {
-                color: $botonm;
-                background-color: $botonBgm;
+                color: $boton;
+                background-color: $botonBgg;
                 text-align: center;
                 opacity: 1;
-                border: 1px solid $botonm;
+                border: 1px solid $boton;
                 transform: scale(1,1.2);
                 transition: .6s;
             }
             a {
                 &:hover {
-                    background-color: $botonBgm;
-                    color: $colorh1m;
+                    background-color: $botonBgg;
+                    color: $boton;
                     border-radius: 30px;
                 }
             }
@@ -525,8 +504,7 @@
     footer{
         opacity: .7;
         padding: 15px;
-        width: 90%;
-        color: $colorp;
+        color: $colorh1;
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
@@ -543,7 +521,7 @@
     }
 
     .footer__redes {
-        width: 60px;
+        width: 100px;
         display: flex;
         img {
             display: flex;
@@ -552,7 +530,7 @@
             border-radius: 25px;
             bottom: 10px;
             right: 65px;
-            width: 50px;
+            width: 40px;
             opacity: .7;
             &:hover {
                 transform: scale( 2, 2);

@@ -1,10 +1,11 @@
 @media #{$desktop}  {
 
     body{
-        background-color: $bg;
+        background-color: $bg;  
         background-image: $bgG;
         padding: auto;
-        margin: 20px
+        margin: 20px;
+        padding: 20px;
     }
 
     h1{
@@ -12,13 +13,13 @@
         font-family: 'Grechen Fuemen', cursive;
         font-size: 60px;
         text-align: center;
+        padding: 10px;
     }
     
     h2{
         color: $colorh2;
         text-align: center;
         text-decoration: underline;
-        margin: 15px;
     }
     
     /* HEADER */
@@ -30,7 +31,7 @@
         grid-template-rows: 1fr 1fr;
         grid-template-areas: "nav nav nav" ". logo ."" . titulo .";
         img {
-            width: 800px;
+            width: 600px;
             margin: auto;
             grid-area: logo;
             border-radius: 10px;
@@ -41,24 +42,22 @@
         img {
             width: 900px;
             margin: auto;
-            display: flex;
+            grid-area: logo;
             position: relative;
             bottom: 50px;
-            grid-area: logo;
             border-radius: 10px;
         }
     }
 
     .aparecer {
-        width: 500px;
-        font-size: 65px;
-        display: flex;
-        justify-content: center;
-        justify-self: center;
+        font-size: 75px;
+        position: relative;
+        top: 45px;
+        margin-bottom: 50px;
         animation-duration: 2s;
         animation-name: aparecer;
         animation-iteration-count: infinite;
-        text-shadow: $sombrag;
+        text-shadow: $sombra;
         grid-area: titulo;
     }
 
@@ -81,42 +80,38 @@
 	padding: 0 5%;
 	height: 100px;
 	background-color: $bg;
-	border: 2px double $bordeg;
 	grid-area: nav;
+	border: 3px double $borde;
 	.logo {
-		float: left;
-		width: 40%;
-		height: 100%;
-		display: flex;
-		position: relative;
-		right: 50px;
-		align-items: center;
-		font-size: 18px;
-		color: $navLogog;
-		text-decoration: underline;
+		font-size: 28px;
+        color: $navLogo;
+        text-decoration: underline;
+        font-weight: bolder;
+        position: relative;
+        top: 10px;
+        text-align: center;
 	}
 	.links {
-		float: right;
 		padding: 0;
 		margin: 0;
-		width: 60%;
 		height: 100%;
 		display: flex;
-		justify-content: space-around;
-		align-items: center;
+        justify-content: space-around;
+        align-items: center;
 		text-decoration: underline;
 		li {
 			list-style: none;
 		}
 		a {
 			display: block;
+            padding: 10px;
 			position: relative;
-			top: 5px;
-			padding: 1em;
+            bottom: 20px;
+            text-align: center;
 			font-size: 14px;
 			font-weight: bold;
 			color: $colorh1;
-			text-decoration: none;
+			text-decoration: underline;
 		}
 	}
 	.icon-burger {
@@ -137,8 +132,8 @@
 }
 
     #nav-toggle {
-	    position: absolute;
-	    top: -100px;
+        position: absolute;
+        top: -100px;
     }
 
     /*SECCIONES*/
@@ -165,11 +160,11 @@
         text-align: center;
         width: 90%;
         height: auto;
-        border: 4px double $bordeg;
+        border: 4px double $borde;
         border-radius: 10px;
         padding: 50px;
         img {
-            border: 2px double $bordeg;
+            border: 2px double $borde;
             border-radius: 10px;
             opacity: .8;
             padding: 20px;
@@ -177,7 +172,7 @@
             width: 320px;
             height: 320px;
             &:hover {
-                border: 2px solid $bordeg;
+                border: 2px solid $borde;
                 opacity: 1;
             }
         }
@@ -210,6 +205,7 @@
             font-weight: bolder;
         }
     }
+
     .row {
         .col-12 {
             p {
@@ -226,13 +222,13 @@
         flex-wrap: wrap;
         justify-content: space-around;
         text-align: center;
-        border: 4px double $bordeg;
+        border: 4px double $borde;
         border-radius: 10px;
         width: 450px;
         height: auto;
         padding: 20px;
         img {
-            border: 2px double $bordeg;
+            border: 2px double $borde;
             border-radius: 10px;
             opacity: .8;
         }
@@ -272,13 +268,13 @@
     }
 
     .h2Preguntas{
-        color: $h2Preguntasg;
-        font-size: 45px;
+        color: $h2Preguntas;
         font-weight: normal;
+        font-size: 45px;
     }
 
     .h3Preguntas{
-        color: $h3Preguntasg;
+        color: $h3Preguntas;
         text-align: center;
         margin: 30px;
         font-size: 30px;
@@ -286,15 +282,13 @@
 
     .main{
         margin: 10px;
-        border: 4px double $bordeg;
+        border: 4px double $borde;
         border-radius: 10px;
     }
 
     .main__info{
-        position: relative;
-        top: 10px;
         text-align: center;
-        color: $infog;
+        color: $info;
         font-size: 20px;
         padding: auto;
         margin: 20px;    
@@ -304,10 +298,11 @@
     .contactanos{
         background-color: $colorBgg;
         background-image: $colorBgGg;
+        text-align: center;
         width: 95%;
         font-size: 25px;
         padding: auto;
-        margin: 20px;
+        margin: 1.6rem;
     }
 
     .formulario{
@@ -320,7 +315,7 @@
 
     .fieldset{
         padding: 15px;
-        border: 4px double $bordeg;
+        border: 4px double $borde;
         border-radius: 10px;
     }
 
@@ -328,6 +323,13 @@
         color:  $colorh2;
         font-size: 30px;
     }
+
+    .headerContactanos{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
 
     .footerCont{
         margin: 45px;
@@ -355,10 +357,12 @@
         grid-area: mapa;
         display: flex;
         position: relative;
-        left: 120px;
+        left: 50px;
         right: 0px;
         padding: 10px;
         margin: 5px;
+        width: 220px ;
+        height: 220px ;
     }
 
     .footerCont__datos{
@@ -377,7 +381,6 @@
             flex-direction: row;
             flex-wrap: nowrap;
             justify-content: space-around;
-            width: 95%;
             margin: 20px;
     }
 
@@ -385,13 +388,11 @@
         width: 320px;
         height: 320px;
         margin: 15px;
-        border: 5px double $bordeg;
+        border: 5px double $borde;
         border-radius: 10px;
     }
 
     .info{
-        position: relative;
-        top: 10px;
         text-align: center;
         color: rgb(255, 255, 255);
         font-size: 25px;
@@ -407,8 +408,7 @@
         font-style: italic;
         display: flex;
         justify-content: start;
-        padding: 10px;
-        
+        padding: 5px;
     }
 
     .requisitosNecesarios {
@@ -418,11 +418,12 @@
         font-style: italic;
         display: flex;
         justify-content: start;
-        padding: 10px;
+        padding: 5px;
     }
 
     span{
         color: $colorp;
+        font-size: 25px;
         text-decoration: underline;
         font-weight: bolder;
     }
@@ -430,8 +431,6 @@
     .olLista{
         color: $colorh1;
         list-style-type: square;
-        position: relative;
-        left: 25px;
         font-size: 20px;
         padding: 20px;
     }
@@ -454,11 +453,11 @@
         text-align: center;
         width: 90%;
         height: auto;
-        border: 4px double $bordeg;
+        border: 4px double $borde;
         border-radius: 10px;
         padding: 50px;
         img {
-            border: 2px double $bordeg;
+            border: 2px double $borde;
             border-radius: 10px;
             opacity: .8;
             padding: 20px;
@@ -466,7 +465,7 @@
             width: 300px;
             height: 300px;
             &:hover {
-                border: 2px solid $bordeg;
+                border: 2px solid $borde;
                 opacity: 1;
             }
         }
@@ -494,18 +493,18 @@
             padding: 5px;
             font-size: 10px;
             &:hover {
-                color: $botong;
+                color: $boton;
                 background-color: $botonBgg;
                 text-align: center;
                 opacity: 1;
-                border: 1px solid $botong;
+                border: 1px solid $boton;
                 transform: scale(1,1.2);
                 transition: .6s;
             }
             a {
                 &:hover {
                     background-color: $botonBgg;
-                    color: $botong;
+                    color: $boton;
                     border-radius: 30px;
                 }
             }
@@ -516,32 +515,33 @@
     footer {
         opacity: .7;
         padding: 15px;
-        width: 90%;
-        color: #8d8c86;
+        color: $colorh1;
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
         justify-content: space-between;
-        font-size: 20px;
+        font-size: 25px;
+        font-weight: bolder;
     }
+
     .footer__didiseñadoPor {
         display: flex;
         position: relative;
         left: 15px;
         top: 10px;
     }
+
     .footer__redes {
-        color: $colorh1;
-        width: 30px;
         display: flex;
+        justify-content: space-around;
         img {
             display: flex;
             position: relative;
             margin: 10px;
+            width: 40px;
             border-radius: 25px;
             bottom: 10px;
             right: 35px;
-            width: 40px;
             opacity: .7;
             &:hover {
                 transform: scale( 2, 2);
