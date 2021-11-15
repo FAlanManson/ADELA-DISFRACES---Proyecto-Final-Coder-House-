@@ -139,8 +139,8 @@
     /*SECCIONES*/
     /*SECCION NUESTROS DISFRACES*/
     .nuestrosDisfraces{
-        background-color: $colorBgg;
-        background-image: $colorBgGg;
+        background-color: $bg;
+        background-image: $bgG;
         padding: auto;
         margin: 3rem;
     }
@@ -236,8 +236,8 @@
     
     /*SECCION CLIENTES*/
     .clientes{
-        background-color: $colorBgg;
-        background-image: $colorBgGg;
+        background-color: $bg;
+        background-image: $bgG;
         padding: auto;
         margin: 3rem;
     }
@@ -250,8 +250,8 @@
 
     /*SECCION PREGUNTAS FRECUENTES*/
     .preguntas{
-        background-color: $colorBgg;
-        background-image: $colorBgGg;
+        background-color: $bg;
+        background-image: $bgG;
         padding: auto;
         margin: 3rem;
     }
@@ -290,8 +290,8 @@
 
     /*SECCION CONTACTANOS*/
     .contactanos{
-        background-color: $colorBgg;
-        background-image: $colorBgGg;
+        background-color: $bg;
+        background-image: $bgG;
         text-align: center;
         width: 95%;
         font-size: 35px;
@@ -460,9 +460,9 @@
         }
     }
 
-    .zoom {
+    .imagenes__zoom {
         &:hover {
-            transform: scale(1.3);
+            transform: scale(1.2);
         }
         transition: transform .6s;
     }
