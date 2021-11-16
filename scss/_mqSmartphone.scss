@@ -40,7 +40,7 @@
 
     .contenedor {
         img {
-        max-width: 350px;
+        max-width: 295px;
         margin: auto;
         grid-area: logo;
         position: relative;
@@ -307,7 +307,8 @@
 
     .formulario{
         margin: 30px;
-        padding: 10px;
+        display: flex;
+        justify-content: center;
         position: relative;
         top: 10px;
         color: $colorh1;
@@ -332,44 +333,27 @@
 
     .footerCont{
         margin: 12px;
-        height: 400px;
-        text-align: center;
-        position: relative;
-        left: 5px;
+        max-width: 95%;
         text-align: center;
         gap: 15px;
-        border: 1px solid lightgray;
-        border-radius: 5px;
-        display: grid;
-        grid-template-columns: repeat(1fr 1fr);
-        grid-template-rows: 1fr 1fr;
-        grid-template-areas: 
-        "texto texto"
-        "mapa datos";
     }
     
     .footerCont__texto{
-        grid-area: texto;
         padding: 10px;
         margin: 5px;
-        position: relative;
-        bottom: 10px;
     }
 
     .footerCont__mapa{
-        grid-area: mapa;
         display: flex;
-        position: relative;
-        bottom: 30px;
-        width: 150px ;
-        height: 150px ;
+        justify-content: center;
     }
 
     .footerCont__datos{
-        grid-area: datos;
         display: flex;
-        position: relative;
-        font-size: 15px;
+        justify-content: center;
+        font-size: 12px;
+        padding: 10px;
+        margin: 5px;
         color: $colorh1;
     }
 
@@ -512,13 +496,11 @@
         opacity: .7;
         padding: 15px;
         color: $colorh1;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+        display: contents;
         font-size: 20px;
     }
 
-    .footer__didiseñadoPor{
+    .footer__diseñadoPor{
         display: flex;
         position: relative;
         left: 15px;
@@ -531,11 +513,8 @@
         padding: 10px;
         img {
             display: flex;
-            position: relative;
             margin: 10px;
             border-radius: 25px;
-            bottom: 10px;
-            right: 15px;
             width: 40px;
             opacity: .7;
             &:hover {

@@ -52,7 +52,7 @@
     border-radius: 10px;
   }
   .contenedor img {
-    max-width: 350px;
+    max-width: 295px;
     margin: auto;
     -ms-grid-row: 2;
     -ms-grid-column: 2;
@@ -374,7 +374,12 @@
   }
   .formulario {
     margin: 30px;
-    padding: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     position: relative;
     top: 10px;
     color: #f3e691;
@@ -402,53 +407,32 @@
   }
   .footerCont {
     margin: 12px;
-    height: 400px;
-    text-align: center;
-    position: relative;
-    left: 5px;
+    max-width: 95%;
     text-align: center;
     gap: 15px;
-    border: 1px solid lightgray;
-    border-radius: 5px;
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: (1fr)[1fr];
-        grid-template-columns: repeat(1fr 1fr);
-    -ms-grid-rows: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        grid-template-areas: "texto texto" "mapa datos";
   }
   .footerCont__texto {
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 2;
-    grid-area: texto;
     padding: 10px;
     margin: 5px;
-    position: relative;
-    bottom: 10px;
   }
   .footerCont__mapa {
-    -ms-grid-row: 2;
-    -ms-grid-column: 1;
-    grid-area: mapa;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    position: relative;
-    bottom: 30px;
-    width: 150px;
-    height: 150px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .footerCont__datos {
-    -ms-grid-row: 2;
-    -ms-grid-column: 2;
-    grid-area: datos;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    position: relative;
-    font-size: 15px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    font-size: 12px;
+    padding: 10px;
+    margin: 5px;
     color: #f3e691;
   }
   .flex {
@@ -611,19 +595,10 @@
     opacity: .7;
     padding: 15px;
     color: #f3e691;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    display: contents;
     font-size: 20px;
   }
-  .footer__didiseñadoPor {
+  .footer__diseñadoPor {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -642,11 +617,8 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    position: relative;
     margin: 10px;
     border-radius: 25px;
-    bottom: 10px;
-    right: 15px;
     width: 40px;
     opacity: .7;
   }
@@ -1031,7 +1003,12 @@
   }
   .formulario {
     margin: 30px;
-    padding: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     position: relative;
     top: 10px;
     color: #f3e691;
@@ -1063,47 +1040,38 @@
     height: 350px;
     text-align: center;
     gap: 25px;
-    border: 1px solid lightgray;
-    border-radius: 5px;
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: (1fr)[1fr];
-        grid-template-columns: repeat(1fr 1fr);
-    -ms-grid-rows: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        grid-template-areas: "texto texto" "mapa datos";
   }
   .footerCont__texto {
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 2;
-    grid-area: texto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     padding: 10px;
     margin: 5px;
     position: relative;
     bottom: 10px;
   }
   .footerCont__mapa {
-    -ms-grid-row: 2;
-    -ms-grid-column: 1;
-    grid-area: mapa;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     position: relative;
-    bottom: 50px;
-    width: 220px;
+    top: 20px;
     height: 220px;
   }
   .footerCont__datos {
-    -ms-grid-row: 2;
-    -ms-grid-column: 2;
-    grid-area: datos;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    position: relative;
-    font-size: 25px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    font-size: 18px;
     color: #f3e691;
   }
   .flex {
@@ -1267,9 +1235,7 @@
     opacity: .7;
     padding: 15px;
     color: #f3e691;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    display: contents;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -1282,7 +1248,7 @@
     font-size: 25px;
     font-weight: bolder;
   }
-  .footer__didiseñadoPor {
+  .footer__diseñadoPor {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1303,8 +1269,7 @@
     position: relative;
     margin: 10px;
     border-radius: 25px;
-    bottom: 10px;
-    right: 65px;
+    top: 10px;
     width: 40px;
     opacity: .7;
   }
@@ -1694,10 +1659,16 @@
   }
   .formulario {
     margin: 30px;
-    padding: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     position: relative;
     top: 10px;
     color: #f3e691;
+    font-size: 35px;
   }
   .fieldset {
     padding: 15px;
@@ -1706,7 +1677,8 @@
   }
   legend {
     color: #f3e691da;
-    font-size: 30px;
+    font-size: 35px;
+    width: 950px;
   }
   .headerContactanos {
     display: -webkit-box;
@@ -1722,55 +1694,42 @@
   }
   .footerCont {
     margin: 45px;
-    width: 95%;
+    max-width: 95%;
     height: 350px;
     text-align: center;
     gap: 15px;
-    border: 1px solid lightgray;
-    border-radius: 5px;
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: (1fr)[1fr];
-        grid-template-columns: repeat(1fr 1fr);
-    -ms-grid-rows: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        grid-template-areas: "texto texto" "mapa datos";
   }
   .footerCont__texto {
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 2;
-    grid-area: texto;
-    padding: 10px;
-    margin: 5px;
-  }
-  .footerCont__mapa {
-    -ms-grid-row: 2;
-    -ms-grid-column: 1;
-    grid-area: mapa;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    position: relative;
-    left: 50px;
-    right: 0px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     padding: 10px;
     margin: 5px;
-    width: 220px;
+    position: relative;
+    bottom: 10px;
+  }
+  .footerCont__mapa {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    position: relative;
+    top: 20px;
     height: 220px;
   }
   .footerCont__datos {
-    -ms-grid-row: 2;
-    -ms-grid-column: 2;
-    grid-area: datos;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    position: relative;
-    left: 0px;
-    right: 50px;
-    padding: 10px;
-    margin: 5px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    font-size: 18px;
     color: #f3e691;
   }
   .flex {
@@ -1934,9 +1893,7 @@
     opacity: .7;
     padding: 15px;
     color: #f3e691;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    display: contents;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -1949,7 +1906,7 @@
     font-size: 25px;
     font-weight: bolder;
   }
-  .footer__didiseñadoPor {
+  .footer__diseñadoPor {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1972,8 +1929,8 @@
     margin: 10px;
     width: 40px;
     border-radius: 25px;
-    bottom: 10px;
-    right: 35px;
+    top: 10px;
+    left: 45px;
     opacity: .7;
   }
   .footer__redes img:hover {

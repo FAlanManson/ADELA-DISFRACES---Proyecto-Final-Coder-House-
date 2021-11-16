@@ -301,7 +301,8 @@
     
     .formulario{
         margin: 30px;
-        padding: 10px;
+        display: flex;
+        justify-content: center;
         position: relative;
         top: 10px;
         color: $colorh1;
@@ -330,18 +331,11 @@
         height: 350px;
         text-align: center;
         gap: 25px;
-        border: 1px solid lightgray;
-        border-radius: 5px;
-        display: grid;
-        grid-template-columns: repeat(1fr 1fr);
-        grid-template-rows: 1fr 1fr;
-        grid-template-areas: 
-        "texto texto"
-        "mapa datos";
     }
     
     .footerCont__texto{
-        grid-area: texto;
+        display: flex;
+        justify-content: center;
         padding: 10px;
         margin: 5px;
         position: relative;
@@ -349,19 +343,17 @@
     }
 
     .footerCont__mapa{
-        grid-area: mapa;
         display: flex;
+        justify-content: center;
         position: relative;
-        bottom: 50px;
-        width: 220px ;
+        top: 20px;
         height: 220px ;
     }
 
     .footerCont__datos{
-        grid-area: datos;
         display: flex;
-        position: relative;
-        font-size: 25px;
+        justify-content: center;
+        font-size: 18px;
         color: $colorh1;
     }
 
@@ -505,7 +497,7 @@
         opacity: .7;
         padding: 15px;
         color: $colorh1;
-        display: flex;
+        display: contents;
         flex-direction: row;
         flex-wrap: nowrap;
         justify-content: space-between;
@@ -513,7 +505,7 @@
         font-weight: bolder;
     }
     
-    .footer__didiseñadoPor{
+    .footer__diseñadoPor{
         display: flex;
         position: relative;
         left: 15px;
@@ -528,8 +520,7 @@
             position: relative;
             margin: 10px;
             border-radius: 25px;
-            bottom: 10px;
-            right: 65px;
+            top: 10px;
             width: 40px;
             opacity: .7;
             &:hover {

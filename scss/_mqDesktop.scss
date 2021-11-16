@@ -307,10 +307,12 @@
 
     .formulario{
         margin: 30px;
-        padding: 10px;
+        display: flex;
+        justify-content: center;
         position: relative;
         top: 10px;
         color: $colorh1;
+        font-size: 35px;
     }
 
     .fieldset{
@@ -321,7 +323,8 @@
 
     legend{
         color:  $colorh2;
-        font-size: 30px;
+        font-size: 35px;
+        width: 950px;
     }
 
     .headerContactanos{
@@ -333,46 +336,33 @@
 
     .footerCont{
         margin: 45px;
-        width: 95%;
+        max-width: 95%;
         height: 350px;
         text-align: center;
         gap: 15px;
-        border: 1px solid lightgray;
-        border-radius: 5px;
-        display: grid;
-        grid-template-columns: repeat(1fr 1fr);
-        grid-template-rows: 1fr 1fr;
-        grid-template-areas: 
-        "texto texto"
-        "mapa datos";
     }
 
     .footerCont__texto{
-        grid-area: texto;
+        display: flex;
+        justify-content: center;
         padding: 10px;
         margin: 5px;
+        position: relative;
+        bottom: 10px;
     }
 
     .footerCont__mapa{
-        grid-area: mapa;
         display: flex;
+        justify-content: center;
         position: relative;
-        left: 50px;
-        right: 0px;
-        padding: 10px;
-        margin: 5px;
-        width: 220px ;
+        top: 20px;
         height: 220px ;
     }
 
     .footerCont__datos{
-        grid-area: datos;
         display: flex;
-        position: relative;
-        left: 0px;
-        right: 50px;
-        padding: 10px;
-        margin: 5px;
+        justify-content: center;
+        font-size: 18px;
         color: $colorh1;
     }
 
@@ -516,7 +506,7 @@
         opacity: .7;
         padding: 15px;
         color: $colorh1;
-        display: flex;
+        display: contents;
         flex-direction: row;
         flex-wrap: nowrap;
         justify-content: space-between;
@@ -524,7 +514,7 @@
         font-weight: bolder;
     }
 
-    .footer__didiseñadoPor {
+    .footer__diseñadoPor {
         display: flex;
         position: relative;
         left: 15px;
@@ -540,8 +530,8 @@
             margin: 10px;
             width: 40px;
             border-radius: 25px;
-            bottom: 10px;
-            right: 35px;
+            top: 10px;
+            left: 45px ;
             opacity: .7;
             &:hover {
                 transform: scale( 2, 2);
